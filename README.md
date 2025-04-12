@@ -57,6 +57,7 @@ queryResult = {
     ]
   }
 },
+
 dataset = jsonToDataset(queryResult);
 
 for (const quad of dataset) {
