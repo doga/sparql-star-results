@@ -6,6 +6,11 @@
 
 A parser for the [SPARQL-Star query results format](https://rdf4j.org/documentation/programming/rdfstar/#extended-sparql-json-format). This format is supported by [GraphDB](https://graphdb.ontotext.com/).
 
+This library converts query results into RDF datasets. Note that this conversion only works for queries that return subject+predicate+object triples. Currently there are only 2 such query forms:
+
+- [CONSTRUCT](https://www.w3.org/TR/sparql12-query/#construct),
+- [DESCRIBE](https://www.w3.org/TR/sparql12-query/#describe).
+
 ## Usage example
 
 <details data-mdrb>
@@ -13,7 +18,7 @@ A parser for the [SPARQL-Star query results format](https://rdf4j.org/documentat
 
 <pre>
 description = '''
-Convert a SPARQL-Star query result into an RDF dataset.
+Convert query result into an RDF dataset.
 '''
 </pre>
 </details>
@@ -32,28 +37,21 @@ queryResult = {
           "type" : "triple",
           "value" : {
             "subject" : {
-              "type" : "uri",
-              "value" : "http://example.org/bob"
+              "type" : "uri", "value" : "http://example.org/bob"
             },
             "predicate" : {
-              "type" : "uri",
-              "value" : "http://xmlns.com/foaf/0.1/age"
+              "type" : "uri", "value" : "http://xmlns.com/foaf/0.1/age"
             },
             "object" : {
-              "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
-              "type" : "literal",
-              "value" : "23"
+              "type" : "literal", "value" : "23", "datatype" : "http://www.w3.org/2001/XMLSchema#integer"
             }
           }
         },
         "b": {
-          "type": "uri",
-          "value": "http://example.org/certainty"
+          "type": "uri", "value": "http://example.org/certainty"
         },
         "c" : {
-          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
-          "type" : "literal",
-          "value" : "0.9"
+          "type" : "literal", "value" : "0.9", "datatype" : "http://www.w3.org/2001/XMLSchema#decimal"
         }
       }
     ]
