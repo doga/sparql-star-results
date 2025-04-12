@@ -1,5 +1,5 @@
 <p align="left">
-<a href="https://rdf.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/doga/doga/raw/main/logos/rdf.svg" height="85" alt="RDF logo" /></a>
+<a href="https://w3c.github.io/sparql-concepts/spec/" target="_blank" rel="noreferrer"><img src="https://github.com/doga/doga/raw/main/logos/sparql.svg" height="85" alt="SPARQL logo" /></a>
 </p>
 
 # SPARQL-Star query result parser
@@ -19,7 +19,7 @@ Convert a SPARQL-Star query result into an RDF dataset.
 </details>
 
 ```javascript
-import { jsonToDataset } from './mod.mjs';
+import { jsonToDataset } from 'https://esm.sh/gh/doga/sparql-star-results@1.0.0/mod.mjs';
 
 const
 queryResult = {
@@ -88,7 +88,7 @@ Sample output for the code above:
 Run the example above by typing this in your terminal (requires [Deno](https://deno.com/) 2+):
 
 ```shell
-deno run --allow-net --allow-run --allow-env --allow-read jsr:@andrewbrey/mdrb@3.0.4 --dax=false --mode=isolated 'https://raw.githubusercontent.com/doga/IRI/master/README.md'
+deno run --allow-net --allow-run --allow-env --allow-read jsr:@andrewbrey/mdrb@3.0.4 --dax=false --mode=isolated 'https://raw.githubusercontent.com/doga/sparql-star-results/refs/heads/main/README.md'
 ```
 
 ∎
