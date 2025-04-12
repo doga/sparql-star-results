@@ -81,6 +81,13 @@ for (const quad of dataset) {
 Sample output for the code above:
 
 ```text
+Quad:
+    Subject quad:
+        Subject:   http://example.org/bob
+        Predicate: http://xmlns.com/foaf/0.1/age
+        Object:    23
+    Predicate: http://example.org/certainty
+    Object:    0.9
 ```
 
 ### Running the usage example
