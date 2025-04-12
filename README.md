@@ -29,11 +29,11 @@ import { jsonToDataset } from 'https://esm.sh/gh/doga/sparql-star-results@1.0.0/
 const
 queryResult = {
   "head" : {
-    "vars" : [ "a", "b", "c" ]
+    "vars" : [ "subject", "predicate", "object" ]
   },
   "results" : {
     "bindings": [
-      { "a" : {
+      { "subject" : {
           "type" : "triple",
           "value" : {
             "subject" : {
@@ -47,10 +47,10 @@ queryResult = {
             }
           }
         },
-        "b": {
+        "predicate": {
           "type": "uri", "value": "http://example.org/certainty"
         },
-        "c" : {
+        "object" : {
           "type" : "literal", "value" : "0.9", "datatype" : "http://www.w3.org/2001/XMLSchema#decimal"
         }
       }
