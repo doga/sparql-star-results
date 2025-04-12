@@ -6,7 +6,7 @@
 
 A parser for the [SPARQL-Star query results format](https://rdf4j.org/documentation/programming/rdfstar/#extended-sparql-json-format). This format is supported by [GraphDB](https://graphdb.ontotext.com/).
 
-This library converts query results into RDF datasets. Note that this conversion only works for queries that return subject+predicate+object triples. Currently there are only 2 such query forms:
+This library converts a SPARQL query result into an RDF [DatasetCore](https://rdf.js.org/dataset-spec/#datasetcore-interface) object. Note that this conversion only works for queries that return subject+predicate+object triples. Currently there are only 2 such query forms:
 
 - [CONSTRUCT](https://www.w3.org/TR/sparql12-query/#construct),
 - [DESCRIBE](https://www.w3.org/TR/sparql12-query/#describe).
