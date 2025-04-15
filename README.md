@@ -24,7 +24,7 @@ Convert query result to an RDF dataset.
 </details>
 
 ```javascript
-import { toDataset } from 'https://esm.sh/gh/doga/sparql-star-results@2.0.0/mod.mjs';
+import { toDataset } from 'https://esm.sh/gh/doga/sparql-star-results@2.0.1/mod.mjs';
 
 const
 queryResult = {
@@ -100,7 +100,7 @@ Convert an RDF dataset to a query result.
 </details>
 
 ```javascript
-import { fromDataset } from 'https://esm.sh/gh/doga/sparql-star-results@2.0.0/mod.mjs';
+import { fromDataset } from 'https://esm.sh/gh/doga/sparql-star-results@2.0.1/mod.mjs';
 
 import rdf from 'https://esm.sh/gh/rdfjs/dataset@v2.0.2';
 import t from 'https://esm.sh/gh/rdfjs/data-model@v2.1.0';
