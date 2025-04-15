@@ -24,7 +24,8 @@ Convert query result into an RDF dataset.
 </details>
 
 ```javascript
-import { jsonToDataset } from 'https://esm.sh/gh/doga/sparql-star-results@1.0.0/mod.mjs';
+import { toDataset } from './mod.mjs';
+// import { toDataset } from 'https://esm.sh/gh/doga/sparql-star-results@2.0.0/mod.mjs';
 
 const
 queryResult = {
@@ -58,7 +59,7 @@ queryResult = {
   }
 },
 
-dataset = jsonToDataset(queryResult);
+dataset = toDataset(queryResult);
 
 for (const quad of dataset) {
   console.group('Quad:');
